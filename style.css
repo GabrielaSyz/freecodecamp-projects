@@ -264,7 +264,7 @@ figcaption {
   font-size: 1em;
 }
 
-table, img, code, .logo {
+table, img, code, {
   width: 90vw;
    margin-left: auto;
   margin-right: auto;
@@ -272,6 +272,9 @@ table, img, code, .logo {
   margin: 10px 0;
 }
 
-  
+.logo {
+  width: 80vw;
+}
+
 
 }
