@@ -1,0 +1,276 @@
+:root {
+  --color-primary: hsl(198 20% 96%);
+  --color-secondary: hsl(198 37% 25%);  
+  --color-accent: hsl(188 100% 73.3%);
+  --fontcolor-base: hsl(204 64.6% 6%);
+  --fontcolor-primary: hsl(198 37% 50%); 
+  --fontcolor-secondary: hsl(198 37% 72%);
+  --color-code: hsla(198 37% 40% / 0.8);
+  --gap-xs: 0.3em;
+  --gap-s: 0.5em;
+  --gap-m: 0.618em;
+  --gap-l: 1em;
+  --gap-xl: 1.618rem;
+  --gap-xxl: 2.618rem;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.5;
+  min-height: 100vh;
+  height: 100dvh;
+  display: flex;
+  position: relative;
+  background-color: var(--color-primary);
+  overflow-x: hidden;
+}
+
+#navbar {
+  padding: 0 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: clamp(200px, 30vw, 290px);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: var(--color-secondary);
+  box-shadow: 0 5px 10px rgba( 0,0,0, 0.7); 
+  background: linear-gradient(
+    190deg,
+  var(--color-secondary) 60%,
+  var(--fontcolor-primary) 100%
+  )
+ }
+
+h1, h2, h3, h4, header {
+  font-family: "Bona Nova", Georgia, serif;
+  font-weight: 600;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+
+header {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+main header {
+   color: var(--fontcolor-primary);
+margin-top: var(--gap-xl);
+margin-bottom: var(--gap-l);
+}
+
+#navbar>header {
+  color: var(--fontcolor-secondary);
+  font-size: 1.25rem;
+  margin-bottom: var(--gap-l);
+  margin-top: var(--gap-xl);
+}
+
+ul.menu, ul.non-bullet {
+  list-style-type: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+ul:not(.menu):not(.non-bullet) {
+padding-left: 1.5em;
+}
+
+li {
+  margin-bottom: var(--gap-s);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+
+a:hover {
+color: var(--color-accent);
+}
+
+#main-doc {
+margin-left: clamp(210px, 32vw, 290px);
+padding: 0 1.5em;
+width: clamp(400px, 80vw, 1200px);
+color: var(--fontcolor-base);
+}
+
+section, article {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2 {
+  font-size: 1.5rem;
+  color: var(--color-secondary);
+  margin-top: var(--gap-m);
+  margin-bottom: var(--gap-s);
+}
+
+h3 {
+  font-size: 1.25rem;
+  color: var(--fontcolor-base);
+  margin-top: var(--gap-s);
+  margin-bottom: var(--gap-xs);
+}
+
+p, figcaption {
+  margin-bottom: var(--gap-m);
+}
+
+span.bold {
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+p a {
+  color: var(--fontcolor-base);
+}
+
+div.technical-examples {
+  display: flex;
+  flex-direction: column; 
+  gap: var(--gap-m);
+}
+
+code {
+  background-color: var(--color-code);
+  padding: var(--gap-m);
+  color: var(--color-primary);
+  font-family: "Courier New", monospace;
+  margin: 0;
+  line-height: 1.4;
+}
+
+code:last-of-type {
+  margin-bottom: var(--gap-xl);
+}
+
+table {
+  width: clamp(400px, 60vw, 800px);
+  border: 1px solid var(--fontcolor-primary);
+  border-collapse: collapse; 
+  border-spacing: 0;
+  margin-bottom: var(--gap-l);
+  margin-top: var(--gap-s);
+}
+
+th, td {
+  font-size: 0.9em;
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--fontcolor-primary); 
+}
+
+tr:last-child td {
+  border-bottom: none; 
+}
+
+.column1 {
+  width: 30%;
+}
+
+.technical-examples>span {
+  padding-top: var(--gap-m);
+}
+
+main>section:last-of-type {
+  padding-bottom: 1em;
+}
+
+img {
+  width: clamp(150px, 75vw, 600px);
+  aspect-ratio: 4 / 3;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+figcaption {
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+.container-img {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  margin-bottom: var(--gap-m);
+}
+
+.logo {
+  aspect-ratio: 1 / 1;
+  height: 400px;
+  width: auto;
+}
+
+
+@media (max-width: 600px) {
+  
+#navbar {
+ padding: 0 1em;
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 100%;
+  height: 530px;
+  box-shadow: 0 5px 5px rgba( 0,0,0, 0.2); 
+  background: linear-gradient(
+    90deg,
+  var(--color-secondary) 40%,
+  var(--fontcolor-primary) 100%
+  );
+
+}
+
+body {
+  font-size: 15px;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+#main-doc {
+position: relative;
+width: 100vw;
+top: 530px;
+left: 0;
+margin: 0;
+padding: 1rem;
+}
+
+  
+figcaption {
+  text-align: left;
+  font-size: 1em;
+}
+
+table, img, code {
+  width: 90vw;
+   margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+
+}
