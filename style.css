@@ -264,16 +264,15 @@ figcaption {
   font-size: 1em;
 }
 
-table, img, code, {
+table, img, code {
   width: 90vw;
-   margin-left: auto;
-  margin-right: auto;
   display: block;
-  margin: 10px 0;
+  margin: 10px auto;
 }
 
 .logo {
-  width: 80vw;
+  width: clamp(150px, 60vw, 400px);
+  height: auto;
 }
 
 
